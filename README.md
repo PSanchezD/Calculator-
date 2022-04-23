@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Javascript Calulator built with React.js and CSS3
+Javascript Calculator built with React.js and CSS3
 
 ## Available Scripts
 
