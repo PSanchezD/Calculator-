@@ -1,55 +1,34 @@
-import { useState } from "react"
 
+import {evaluate} from "mathjs";
+import { useState } from "react"
 
 
 function Main(){
 
-    const [num,setNum]=useState("0")
-    const [num2,setNum2]=useState('')
-    const [opt,setOpt]=useState("")
+        const [result,setResult]=useState("")
 
+        const handleOne=(e)=>{
+            setResult(result.concat(e.target.innerText))
+        };
 
-function handleOne(e){
-  
-    const n = e.target.innerText; 
+        const operation=(e)=>{
+        setResult(result + e.target.innerText);
+        };
 
-    if(num === "0"){
-        setNum(n)
-        
-    }
-    else{
-        setNum( num + n)
-    };
-    
-}
+        const clear=()=>{
+            setResult("")
+            
+        };
 
-
-
-function handleOP(e){
-
-    const oper = e.target.innerText;
-    if(opt === ""){
-        setOpt(oper)
-    }
-    else{
-        setOpt("")
-    }
-
-}
-
-function handleRest(){
-    setNum("0")
-    setOpt("")
-    setNum2("")
-}
-
-
+        const equal =()=>{
+            setResult(evaluate(result))
+        }
 
     return(
         <>
            <div className="container">
                <div className="cal-c">
-                   <h1>{num}{opt}{num2}</h1>
+                   <h1>{result}</h1>
                    <div className="numb-c">
                     <button onClick={handleOne}>1</button>
                     <button onClick={handleOne}>2</button>
@@ -63,11 +42,12 @@ function handleRest(){
                     <button onClick={handleOne}>0</button>
                    </div>
                    <div className="opt-c">
-                    <button onClick={handleOP}>+</button>
-                    <button onClick={handleOP}>-</button>
-                    <button onClick={handleOP}>x</button>
-                    <button onClick={handleOP}>/</button>
-                    <button onClick={handleRest}>AC</button>
+                    <button onClick={operation}>+</button>
+                    <button onClick={operation}>-</button>
+                    <button onClick={operation}>*</button>
+                    <button onClick={operation}>/</button>
+                    <button onClick={equal}>=</button>
+                    <button onClick={clear}>AC</button>
                    </div>
                </div>
            </div>
