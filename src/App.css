@@ -1,17 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+body{
+    margin: 0px;
+    background-color: whitesmoke;
+}
+
+.jumbo{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(45deg, rgb(31, 34, 71),wheat);
+    width: 100%;
+    height: 100px;
+}
+.jumbo h1{
+    color: black;
+    font-size: 50px;
+    font-family: 'Archivo Black';
+}
+
+
 .container{
     display: flex;
     justify-content: center;
-}
-.cal-c{
+    margin-top: 30px;
     
 }
-.numb-c button{
-    flex-direction: row ;
-    border: none;
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
+.cal-c {
+    height: 600px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 10px 10px 15px;
+    background-color: rgb(31, 34, 71);
+    border-radius: 30px;
+    
 }
+
+.result-c{
+    border:rgb(0, 0, 0) solid;
+    display: flex;
+    flex-flow: wrap;
+    background-color: wheat;
+    margin-top: 0px;
+    width: 500px;
+    height: 150px;
+}
+.result-c h1{
+    overflow-x:auto;
+    font-family: Impact;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    font-size: 60px;
+    font-family: 'Archivo Black';
+}
+
+.numb-c{
+    height: 350px;
+    width: 310px;
+    margin-left: 30px;
+}
+
+.numb-c button{
+    border: rgb(1, 182, 218) solid;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px;
+    height: 65px;
+    width: 80px;
+    font-size: 30px;
+    background-color: rgb(68, 92, 172);
+}
+
 .numb-c button:hover{
-    background-color: rgb(157, 239, 239);
+    background-color: rgb(29, 112, 255);
+}
+
+.opt-c{
+    border-left: wheat 1px solid;
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+    width: 105px;
+    margin-left: 30px;
+    padding-left: 10px;
+    
+}
+
+.opt-c button{
+   border: rgb(1, 182, 218) solid;
+    margin: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px;
+    height: 60px;
+    width: 80px;
+    font-size: 30px;
+    background-color: rgb(68, 92, 172);
+}
+.opt-c button:hover{
+    background-color: rgb(29, 112, 255);
+}
+
+@media all and (max-width: 480px){
+
+    .cal-c {
+        height: 700px;
+        width: 350px;
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow: 10px 10px 15px;
+        background-color: rgb(31, 34, 71);
+        border-radius: 30px;
+    }
+
+    .result-c{
+        border:rgb(0, 0, 0) solid;
+        display: flex;
+        flex-flow: wrap;
+        background-color: wheat;
+        margin-top: 0px;
+        width: 500px;
+        height: 150px;
+    }
+
+    .result-c h1{
+        overflow-x:auto;
+        font-family: Impact;
+        padding-left: 30px;
+        padding-bottom: 20px;
+        font-size: 60px;
+        font-family: 'Archivo Black';
+    }
+
+    .numb-c{
+        margin-top: 10px;
+        height: 350px;
+        width: 310px;
+        margin-left: 30px;
+        box-sizing: content-box;
+    }
+    
+    .opt-c{
+        border-top: wheat 1px solid;
+        border-left: none;
+        display: flex;
+        flex-direction: row;
+        height: 370px;
+        width: 300px;
+        margin-top: 20px;
+    }
+
+    .opt-c button{
+        border: rgb(1, 182, 218) solid;
+        margin-top: 40px;
+        border-radius: 100px;
+        box-shadow: 10px 10px;
+        height:60px;
+        width: 50px;
+        font-size: 30px;
+        padding: 10px;
+        background-color: rgb(68, 92, 172);
+    }
 }
