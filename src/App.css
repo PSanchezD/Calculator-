@@ -120,12 +120,12 @@ body{
         flex-flow: wrap;
         background-color: wheat;
         margin-top: 0px;
-        width: 500px;
+        width: 350px;
         height: 150px;
     }
 
     .result-c h1{
-        overflow-x:auto;
+        overflow-x:scroll;
         font-family: Impact;
         padding-left: 30px;
         padding-bottom: 20px;
@@ -154,7 +154,7 @@ body{
     .opt-c button{
         border: rgb(1, 182, 218) solid;
         margin-top: 40px;
-        border-radius: 100px;
+        border-radius: 10px;
         box-shadow: 10px 10px;
         height:60px;
         width: 50px;
